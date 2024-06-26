@@ -30,11 +30,60 @@
             <div class="row">
                 <div class="about-col-1">
                     <img src="images/IMG_1776.JPG">   <!-- Add my photo here after editing in photoshop, a place holder for now -->
-                    <h1>About Me!</h1>
                 </div>
-                <div class="about-col-2"></div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me!</h1>
+                    <p>Hi, I'm Nikhil Mohan, a high school student from Windsor, Canada. I'm passionate about technology, photography, and sports. Whether I'm coding a new project, capturing stunning landscapes, or playing basketball with friends, I always strive to push my limits and learn something new. I enjoy exploring the intersection of creativity and technology, constantly seeking out new challenges and opportunities to grow. In my free time, you'll often find me tinkering with gadgets, improving my photography skills, or diving into a good book. Welcome to my portfolio, where I share my journey and projects!</p>
+                
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>Arduino</span><br>Arduino Software and Hardware</li>
+                            <li><span>Web Development</span><br>Web App Development</li>
+                            <li><span>Game Development</span><br>Unity, Godot, Unreal Engine Game Development</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="experience">
+                        <ul>
+                            <li><span>2023 - Current</span><br>Code Ninjas Sensei and Camp Leader</li>
+                            <li><span>2021 - Current</span><br>Grades 9-12 School Tutor</li>
+                            <li><span>2021 - Current</span><br>Graphic Desinger</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>2021-Current</span><br>High School Student</li>
+                        </ul>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
+
+<!-- portfolio -->
+
+
+<script>
+
+    var tabLinks = document.getElementsByClassName("tab-links")
+    var tabContents = document.getElementsByClassName("tab-contents")
+
+    function opentab(tabName){
+        for (tabLink of tabLinks) {
+            tabLink.classList.remove("active-link");
+        }
+        for (tabContent of tabContents) {
+            tabContent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabName).classList.add("active-tab");
+    }
+
+</script>    
+
 </body>
 </html>
