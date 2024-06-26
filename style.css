@@ -1,7 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
 *{
     margin: 0;
     padding: 0;
-    font-family: 'Poppins', 'sans-sarif';
+    font-family: 'Poppins', sans-sarif;
     box-sizing: border-box;
 }
 
@@ -82,8 +84,8 @@ nav ul li a:hover::after{
 }
 
 #about img{
-    width: 1656px;
-    height: 2208px;
+    width: calc(1656px/3);
+    height: calc(2208px/3);
 }
 
 .row{
