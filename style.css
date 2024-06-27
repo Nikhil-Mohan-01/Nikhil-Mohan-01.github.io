@@ -239,10 +239,10 @@ nav ul li a:hover::after{
   /* Number text (1/3 etc) */
 .numbertext {
     color: #ff004f;
-    font-size: 12px;
+    font-size: 18px;
     padding: 8px 12px;
     position: absolute;
-    top: 0;
+    top: 20px;
 }
   
   /* The dots/bullets/indicators */
@@ -275,4 +275,35 @@ nav ul li a:hover::after{
 /* On smaller screens, decrease text size */
 @media only screen and (max-width: 300px) {
     .prev, .next,.text {font-size: 11px}
+}
+
+.port-row {
+    display: flex;
+    flex-wrap: nowrap; /* Ensure columns don't wrap */
+    justify-content: space-between; /* Space out the columns */
+    align-items: center; /* Align items vertically center */
+}
+
+.port-col-1, .port-col-2 {
+    flex-basis: 50%; /* Adjust the width to fit your design */
+}
+
+.port-col-2{
+    padding: 0 50px;
+}
+
+.port-col-1 img {
+    width: 100%;
+    border-radius: 15px;
+}
+
+.text {
+    color: #f2f2f2;
+    font-size: 15px;
+    padding: 8px 12px;
+    text-align: left;
+}
+
+.slideshow-container{
+    padding-top: 20px;
 }
