@@ -352,7 +352,7 @@ nav ul li a:hover::after{
     padding-top: 45px;
 }
 
-.contact-left p span{
+.contact-left p {
     color:#ff004f;
     font-size: 20px;
 }
@@ -467,4 +467,10 @@ nav .fas{
     .contact-left, .contact-right{
         flex-basis: 100%;
     }
+}
+
+#msg{
+    color: #61b753;
+    margin-top: -10p;
+    display: block;
 }
