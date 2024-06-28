@@ -272,10 +272,10 @@ nav ul li a:hover::after{
     to {opacity: 1}
 }
   
-/* On smaller screens, decrease text size */
+/* On smaller screens, decrease text size
 @media only screen and (max-width: 300px) {
     .prev, .next,.text {font-size: 11px}
-}
+} */
 
 .port-row {
     display: flex;
@@ -344,7 +344,68 @@ nav ul li a:hover::after{
     margin-top: 25px;
 }
 
+#resume{
+    padding-top: 45px;
+}
+
 .contact-left p span{
     color:#ff004f;
     font-size: 20px;
+}
+
+/* button */
+.btn {
+    padding: 10px 10px;
+    text-decoration: none;
+    background-color: black; 
+    color: white; 
+    border: 2px solid #ff004f;
+    border-radius: 10px;
+    transition: 0.6s ease;
+}
+  
+.btn:hover {
+    background-color: #ff004f;
+    color: white;
+}
+
+.contact-right form{
+    width: 100%;
+}
+
+form input, form textarea{
+    width: 100%;
+    border: 0;
+    outline: none;
+    background: #262626;
+    padding: 15px;
+    margin: 15px 0;
+    color: white;
+    font-size: 18px;
+    border-radius: 6px;
+}
+
+form .btn{
+    font-size: 15px;
+    cursor: pointer;
+}
+
+/* whitespace */
+.space{
+    margin-top: 300px;
+    color: black;
+}
+
+/* css for small screen  */
+@media only screen and (max-width: 600px){
+    #header{
+        background-image: url(images/Arduino_Logo.png); /* add smaller backrgound image here for phones */
+    }
+    .header-text{
+        margin-top: 100%;
+        font-size: 16px;
+    }
+    .header-text h1{
+        font-size: 30px;
+    }
 }
