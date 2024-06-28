@@ -313,6 +313,65 @@ nav ul li a:hover::after{
     padding-top: 20px;
 }
 
+/* Portfolio Section */
+#portfolio {
+    padding: 50px 0;
+    background: #000; /* Change to your preferred background color */
+}
+
+.work-list {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 50px;
+    flex-wrap: wrap;
+}
+
+.work {
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+    background: #111; /* Change to your preferred background color */
+    color: #fff; /* Change to your preferred text color */
+    text-align: center;
+    width: 300px;
+}
+
+.work img {
+    width: 100%;
+    border-radius: 10px 10px 0 0;
+    display: block;
+}
+
+.layer{
+    width:100%;
+    height: 0%;
+    background: linear-gradient(rgba(0, 0, 0, 0.6), #ff004f);
+    border-radius: 10px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 40px;
+    text-align: center;
+}
+
+.work:hover img{
+    transform: scale(1.1);
+}
+
+.layer h3{
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+
+
+
 /* contact */
 .social-icons{
     display: flex;
@@ -480,6 +539,7 @@ nav .fas{
     .contact-right{
         margin-top: 30px;
     }
+    .prev, .next,.text {font-size: 11px}
 }
 
 #msg{
