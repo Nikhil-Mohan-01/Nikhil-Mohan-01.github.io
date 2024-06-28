@@ -90,8 +90,9 @@ nav ul li a:hover::after{
 }
 
 #about img{
-    width: calc(1656px/3);
-    height: calc(2208px/3);
+    margin-top: -5%;
+    margin-left: 15%;
+    width: 70%;
 }
 
 .row{
@@ -407,7 +408,7 @@ nav .fas{
 /* css for small screen  */
 @media only screen and (max-width: 600px){
     #header{
-        background-image: url(images/Arduino_Logo.png); /* add smaller backrgound image here for phones */
+        background-image: url(images/background\ copy.png); /* add smaller backrgound image here for phones */
     }
     .header-text{
         margin-top: 100%;
@@ -458,14 +459,26 @@ nav .fas{
         margin-bottom: 30px;
     }
     .about-col-2{
-        font-size: 14px;;
+        font-size: 12px;;
     }
     .tab-links{
-        font-size: 16px;
+        font-size: 14px;
         margin-right: 20px;
     }
     .contact-left, .contact-right{
         flex-basis: 100%;
+    }
+    #portfolio h1{
+        font-size: 30px;
+    }
+    #contact h1{
+        font-size: 40px;
+    }
+    #contact p{
+        font-size: 16px;
+    }
+    .contact-right{
+        margin-top: 30px;
     }
 }
 

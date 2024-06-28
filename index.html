@@ -11,7 +11,7 @@
     <div id="header">
         <div class="container">
             <nav>
-                <img src="" class="">   <!-- Add my photo here after editing in photoshop, a place holder for now -->
+                <img src="" class="">  <!-- Add my photo here after editing in photoshop, a place holder for now -->
                 <ul id="sideMenu">
                     <li><a href="#header">Home</a></li>
                     <li><a href="#about">About</a></li>
@@ -32,7 +32,7 @@
         <div class="container">
             <div class="row">
                 <div class="about-col-1">
-                    <img src="images/IMG_1776.JPG">   <!-- Add my photo here after editing in photoshop, a place holder for now -->
+                    <img src="images/IMG_1120-removebg-preview.png">  
                 </div>
                 <div class="about-col-2">
                     <h1 class="sub-title">About Me!</h1>
@@ -42,6 +42,7 @@
                         <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
                         <p class="tab-links" onclick="opentab('experience')">Experience</p>
                         <p class="tab-links" onclick="opentab('education')">Education</p>
+                        <p class="tab-links" onclick="opentab('languages')">Languages</p>
                     </div>
                     <div class="tab-contents active-tab" id="skills">
                         <ul>
@@ -60,6 +61,15 @@
                     <div class="tab-contents" id="education">
                         <ul>
                             <li><span>2021-Current</span><br>High School Student</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="languages">
+                        <ul>
+                            <li><span>Python</span><br>Machine Learning and APIs</li>
+                            <li><span>C++</span><br>Arduino and Unreal Engine</li>
+                            <li><span>C#</span><br>Unity Game Development</li>
+                            <li><span>GDScript</span><br>Godot Game Development</li>
+                            <li><span>Html / CSS / SCSS / JavaScript</span><br>Web Development</li>
                         </ul>
                     </div>
                 </div>
@@ -87,7 +97,7 @@
                     <div class="port-row">
                         <div class="port-col-1">
                             <div class="numbertext">2 / 3</div>
-                            <a href="#"><img src="images/IMG_2467.HEIC"></a>  <!-- Godot Images Here -->
+                            <a href="#"><img src="images/image.png"></a>  <!-- Godot Images Here -->
                         </div>
                         <div class="port-col-2">
                             <p>Playmakers is a 2D platformer football game I developed using the Godot Engine. In this exciting game, players choose from different character classes, each with unique abilities, and aim to shoot the ball through the uprights. The challenge lies in the game's unique twist: if the ball touches the ground, the game restarts. With its engaging gameplay and strategic elements, Playmakers offers a fresh and fun take on traditional football games, showcasing my skills in game design and development.</p>
@@ -101,7 +111,7 @@
                             <a href="#"><img src="images/Screen Recording 2024-06-28 at 12.35.27 PM.mov"></a>
                         </div>
                         <div class="port-col-2">
-                            <p>Caption Text</p>
+                            <p>In one of my recent projects, I utilized Blender to create and animate a detailed model of the Sun. This project involved designing a highly realistic 3D representation of the Sun, complete with intricate textures and dynamic effects to simulate solar flares and surface activity. Using Blender's powerful animation tools, I brought the Sun to life, creating smooth and captivating animations that highlight the intense energy and movement of solar phenomena. This project showcases my proficiency in 3D modeling, texturing, and animation within Blender, as well as my ability to create visually compelling and scientifically accurate representations. It also highlights my dedication to using cutting-edge tools to bring complex concepts to life in an engaging and educational manner.</p>
                         </div>
                     </div>
                 </div>
@@ -167,31 +177,37 @@
         document.getElementById(tabName).classList.add("active-tab");
     }
 
-    let slideIndex = 1;
-    showSlides(slideIndex);
+    let slideIndex = 0;
+    showSlides();
 
     function plusSlides(n) {
-    showSlides(slideIndex += n);
+        showSlides(slideIndex += n);
     }
 
     function currentSlide(n) {
-    showSlides(slideIndex = n);
+        showSlides(slideIndex = n);
     }
     
     function showSlides(n) {
-    let i;
-    let slides = document.getElementsByClassName("mySlides");
-    let dots = document.getElementsByClassName("dot");
-    if (n > slides.length) {slideIndex = 1}    
-    if (n < 1) {slideIndex = slides.length}
-    for (i = 0; i < slides.length; i++) {
-        slides[i].style.display = "none";  
-    }
-    for (i = 0; i < dots.length; i++) {
-        dots[i].className = dots[i].className.replace(" active", "");
-    }
-    slides[slideIndex-1].style.display = "block";  
-    dots[slideIndex-1].className += " active";
+        let i;
+        let slides = document.getElementsByClassName("mySlides");
+        let dots = document.getElementsByClassName("dot");
+        if (n === undefined) {
+            slideIndex++;
+        } else {
+            slideIndex = n;
+        }
+        if (slideIndex > slides.length) {slideIndex = 1}
+        if (slideIndex < 1) {slideIndex = slides.length}
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";  
+        }
+        for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex-1].style.display = "block";  
+        dots[slideIndex-1].className += " active";
+        setTimeout(showSlides, 5000); // Change image every 5 seconds
     }
 
     var sideMenu = document.getElementById("sideMenu");
