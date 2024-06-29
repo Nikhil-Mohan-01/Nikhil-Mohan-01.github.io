@@ -314,7 +314,8 @@ nav ul li a:hover::after{
 }
 
 /* Portfolio Section */
-#portfolio {
+#portfolio-for-phone {
+    display: none;
     padding: 50px 0;
     background: #000; /* Change to your preferred background color */
 }
@@ -330,7 +331,6 @@ nav ul li a:hover::after{
 .work {
     border-radius: 10px;
     position: relative;
-    overflow: hidden;
     background: #111; /* Change to your preferred background color */
     color: #fff; /* Change to your preferred text color */
     text-align: center;
@@ -341,6 +341,7 @@ nav ul li a:hover::after{
     width: 100%;
     border-radius: 10px 10px 0 0;
     display: block;
+    transition: transform 0.3s;
 }
 
 .layer{
@@ -358,19 +359,21 @@ nav ul li a:hover::after{
     flex-direction: column;
     padding: 0 40px;
     text-align: center;
+    transition: 0.3s;
 }
 
 .work:hover img{
     transform: scale(1.1);
 }
 
+.work:hover .layer{
+    height: 100%;
+}
+
 .layer h3{
     font-size: 16px;
     margin-bottom: 20px;
 }
-
-
-
 
 /* contact */
 .social-icons{
@@ -540,6 +543,16 @@ nav .fas{
         margin-top: 30px;
     }
     .prev, .next,.text {font-size: 11px}
+
+    #portfolio {
+        display: none;
+    }
+    #portfolio-for-phone{
+        display: block;
+    }
+    #portfolio-for-phone h1{
+        font-size: 30px;
+    }
 }
 
 #msg{
