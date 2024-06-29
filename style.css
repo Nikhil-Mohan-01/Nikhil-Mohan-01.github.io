@@ -344,6 +344,13 @@ nav ul li a:hover::after{
     transition: transform 0.3s;
 }
 
+.work video{
+    width: 100%;
+    border-radius: 10px 10px 0 0;
+    display: block;
+    transition: transform 0.3s;
+}
+
 .layer{
     width:100%;
     height: 0%;
@@ -373,6 +380,10 @@ nav ul li a:hover::after{
 .layer h3{
     font-size: 16px;
     margin-bottom: 20px;
+}
+
+.port-for-phone{
+    display: none;
 }
 
 /* contact */
@@ -497,6 +508,12 @@ nav .fas{
     nav ul li{
         display: block;
         margin: 25px;
+    }
+    .port{
+        display: none;
+    }
+    .port-for-phone{
+        display: inline;
     }
     nav ul .fas{
         position: absolute;
