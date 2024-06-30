@@ -24,6 +24,6 @@ sliderContainer.addEventListener('mousemove', (e) => {
     if (!isDown) return;
     e.preventDefault();
     const x = e.pageX - sliderContainer.offsetLeft;
-    const walk = (x - startX) * 3; //scroll-fast
+    const walk = (x - startX) * 3; // scroll-fast
     sliderContainer.scrollLeft = scrollLeft - walk;
 });
