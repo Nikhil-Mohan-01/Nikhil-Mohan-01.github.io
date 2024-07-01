@@ -384,8 +384,8 @@ nav ul li a:hover::after{
     margin-bottom: 20px;
 }
 
-.port-for-phone{
-    display: none;
+.port, .port-for-phone{
+    display: inline-block;
 }
 
 /* photography */
@@ -442,6 +442,9 @@ nav ul li a:hover::after{
 }
 
 /* contact */
+#contact{
+    margin-top: 200px;
+}
 .social-icons {
     display: flex;
     justify-content: center; 
@@ -533,7 +536,7 @@ form .btn{
 
 /* whitespace */
 .space{
-    margin-top: 300px;
+    margin-top: 200px;
     color: black;
 }
 
@@ -576,7 +579,7 @@ nav .fas{
         display: none;
     }
     .port-for-phone{
-        display: inline;
+        display: inline-block;
     }
     nav ul .fas{
         position: absolute;
@@ -638,6 +641,15 @@ nav .fas{
     }
     #portfolio-for-phone p{
         font-size: 9px;
+    }
+    .carousel h1{
+        font-size: 30px;
+    }
+}
+
+@media (min-width: 601px){
+    .port{
+        display: none;
     }
 }
 

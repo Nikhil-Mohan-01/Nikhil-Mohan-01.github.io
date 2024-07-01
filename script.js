@@ -88,7 +88,7 @@ const carouselTrack = document.querySelector('.carousel-track');
 const carouselCards = document.querySelectorAll('.carousel-card');
 
 let radius;
-if (window.matchMedia("(max-width: 600)").matches) {
+if (window.matchMedia("(max-width: 600px)").matches) {
   radius = 150;
 } else {
   radius = 300;
@@ -105,3 +105,29 @@ carouselCards.forEach((card, index) => {
     const z = Math.sin(theta) * radius;
     card.style.transform = `translateX(${x}px) translateZ(${z}px)`;
 });
+
+
+// portfolio switch based on screen size
+function handleViewportChanges() {
+    var portLink = document.querySelector('.port');
+    var portForPhoneLink = document.querySelector('.port-for-phone');
+
+    if (window.matchMedia("(max-width: 600px").matches){
+        if (portLink) {
+            portLink.style.display = 'none';
+        }
+        if (portForPhoneLink) {
+            portForPhoneLink.style.display = 'inline-block';
+        }
+    } else {
+        if (portLink) {
+            portLink.style.display = 'inline-block';
+        }
+        if (portForPhoneLink) {
+            portForPhoneLink.style.display = 'none';
+        }
+    }
+}
+
+handleViewportChanges();
+window.addEventListener('resize', handleViewportChanges);
