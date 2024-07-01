@@ -86,7 +86,15 @@ form.addEventListener('submit', e => {
 // Photography
 const carouselTrack = document.querySelector('.carousel-track');
 const carouselCards = document.querySelectorAll('.carousel-card');
-const radius = 500; // Adjust the radius to control the size of the circle
+
+let radius;
+if (window.matchMedia("(max-width: 600)").matches) {
+  radius = 150;
+} else {
+  radius = 300;
+}
+console.log(radius);
+//const radius = 300; // Adjust the radius to control the size of the circle
 const cardCount = carouselCards.length;
 const angleStep = 360 / cardCount;
 

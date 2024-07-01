@@ -185,6 +185,8 @@ nav ul li a:hover::after{
 }
 
 .work{
+    width: 439px; 
+    height: 586px;
     border-radius: 10px;
     position: relative;
     overflow: hidden;
@@ -192,6 +194,7 @@ nav ul li a:hover::after{
 
 .work img{
     width: 100%;
+    height: 100%;
     border-radius: 10px;
     display: block;
 }
@@ -287,6 +290,8 @@ nav ul li a:hover::after{
     flex-wrap: nowrap; 
     justify-content: space-between;
     align-items: center; 
+    width: 1000px;
+    height: 650px;
 }
 
 .port-col-1, .port-col-2 {
@@ -297,8 +302,9 @@ nav ul li a:hover::after{
     padding: 0 50px;
 }
 
-.port-col-1 img {
+.port-col-1 img, .port-col-1 video{
     width: 100%;
+    height: 100%;
     border-radius: 15px;
 }
 
