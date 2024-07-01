@@ -382,6 +382,59 @@ nav ul li a:hover::after{
     display: none;
 }
 
+/* photography */
+.carousel {
+    position: relative;
+    width: 80vw;
+    height: 60vh;
+    perspective: 1000px;
+    margin-bottom: 100px;
+}
+
+.carousel-track {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    transform-style: preserve-3d;
+    animation: rotate 20s infinite linear;
+}
+
+.carousel-card {
+    position: absolute;
+    width: 200px;
+    height: 300px;
+    transition: transform 0.5s ease;
+}
+
+.carousel-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+@keyframes rotate {
+    from {
+        transform: rotateY(0deg);
+    }
+    to {
+        transform: rotateY(360deg);
+    }
+}
+
+
+@keyframes rotate {
+    from {
+        transform: rotateY(0deg);
+    }
+    to {
+        transform: rotateY(360deg);
+    }
+}
+
 /* contact */
 .social-icons {
     display: flex;

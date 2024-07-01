@@ -1,29 +1,13 @@
-const sliderContainer = document.querySelector('.slider-container');
-let isDown = false;
-let startX;
-let scrollLeft;
+const carouselTrack = document.querySelector('.carousel-track');
+const carouselCards = document.querySelectorAll('.carousel-card');
+const radius = 500; // Adjust the radius to control the size of the circle
+const cardCount = carouselCards.length;
+const angleStep = 360 / cardCount;
 
-sliderContainer.addEventListener('mousedown', (e) => {
-    isDown = true;
-    sliderContainer.classList.add('active');
-    startX = e.pageX - sliderContainer.offsetLeft;
-    scrollLeft = sliderContainer.scrollLeft;
-});
-
-sliderContainer.addEventListener('mouseleave', () => {
-    isDown = false;
-    sliderContainer.classList.remove('active');
-});
-
-sliderContainer.addEventListener('mouseup', () => {
-    isDown = false;
-    sliderContainer.classList.remove('active');
-});
-
-sliderContainer.addEventListener('mousemove', (e) => {
-    if (!isDown) return;
-    e.preventDefault();
-    const x = e.pageX - sliderContainer.offsetLeft;
-    const walk = (x - startX) * 3; // scroll-fast
-    sliderContainer.scrollLeft = scrollLeft - walk;
+carouselCards.forEach((card, index) => {
+    const angle = angleStep * index;
+    const theta = (angle * Math.PI) / 180;
+    const x = Math.cos(theta) * radius;
+    const z = Math.sin(theta) * radius;
+    card.style.transform = `translateX(${x}px) translateZ(${z}px)`;
 });
